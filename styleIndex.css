@@ -1,0 +1,888 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Hero section background for non-index pages */
+body:not(.index-page) .joyeria-hero,
+body:not(.index-page) .accesorios-hero,
+body:not(.index-page) .novedades-hero,
+body:not(.index-page) .regalos-hero {
+    background-image: url('Img/depositphotos_89382886-stock-photo-jewelry-store-blurred-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hide the existing images in hero sections */
+body:not(.index-page) .joyeria-image,
+body:not(.index-page) .accesorios-image,
+body:not(.index-page) .novedades-image {
+    display: none;
+}
+
+/* Style the hero content for better visibility over background */
+body:not(.index-page) .joyeria-hero-content,
+body:not(.index-page) .accesorios-hero-content,
+body:not(.index-page) .novedades-hero-content,
+body:not(.index-page) .regalos-hero-content {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Ensure text is readable */
+body:not(.index-page) .joyeria-hero-content h2,
+body:not(.index-page) .accesorios-hero-content h2,
+body:not(.index-page) .novedades-hero-content h2,
+body:not(.index-page) .regalos-hero-content h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+body:not(.index-page) .joyeria-hero-content p,
+body:not(.index-page) .accesorios-hero-content p,
+body:not(.index-page) .novedades-hero-content p,
+body:not(.index-page) .regalos-hero-content p {
+    color: #666;
+}
+
+/* Header y navegación */
+header {
+    background-color: white;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.logo a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+nav ul {
+    list-style: none;
+    text-align: left;
+}
+
+nav li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #666;
+}
+
+/* Hero Section con video de fondo */
+.hero {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.hero-content h2 {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: normal;
+}
+
+/* Sección Historia */
+.historia {
+    padding: 80px 20px;
+    background-color: white;
+}
+
+.historia-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: stretch;
+    gap: 50px;
+}
+
+.texto {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.texto h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: bold;
+}
+
+.texto p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.imagen {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagen img {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Sección Joyería */
+.joyeria {
+    padding: 80px 20px;
+    background-color: #f0f0f0;
+}
+
+.joyeria h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #333;
+}
+
+.productos {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 30px;
+}
+
+.producto {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.producto img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.producto h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
+    font-weight: bold;
+}
+
+.producto p {
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+/* Sección Novedades Hero */
+.novedades-hero {
+    padding: 80px 20px;
+    background-color: white;
+}
+
+.novedades-hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.novedades-hero-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.novedades-image {
+    flex: 1;
+    text-align: center;
+}
+
+.novedades-image img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.novedades-text {
+    flex: 1;
+}
+
+.novedades-text h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: bold;
+}
+
+.novedades-text p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+/* Sección Descuentos */
+.descuentos {
+    padding: 80px 20px;
+    background-color: white;
+    text-align: center;
+}
+
+.descuentos h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #333;
+}
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto 50px;
+}
+
+.producto-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.producto-card:hover {
+    transform: translateY(-5px);
+}
+
+.producto-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.producto-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: bold;
+}
+
+.producto-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.precio {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.btn-ver-mas {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-ver-mas:hover {
+    background-color: #555;
+}
+
+.btn-ver-producto {
+    background-color: #8B5CF6;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+}
+
+.btn-ver-producto:hover {
+    background-color: #7C3AED;
+}
+
+.ver-mas {
+    text-align: center;
+}
+
+.ver-mas p {
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+/* Sección Joyería Hero */
+.joyeria-hero {
+    padding: 80px 20px;
+    background-color: white;
+}
+
+.joyeria-hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.joyeria-hero-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.joyeria-image {
+    margin-bottom: 20px;
+}
+
+.joyeria-image img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.joyeria-hero-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: bold;
+}
+
+.joyeria-hero-content p {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Sección Populares */
+.populares {
+    padding: 80px 20px;
+    background-color: white;
+}
+
+.populares-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.populares-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #333;
+}
+
+.productos-grid-populares {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto 50px;
+}
+
+/* Sección Accesorios Hero */
+.accesorios-hero {
+    padding: 80px 20px;
+    background-color: white;
+}
+
+.accesorios-hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.accesorios-hero-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.accesorios-image {
+    margin-bottom: 20px;
+}
+
+.accesorios-image img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.accesorios-hero-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: bold;
+}
+
+.accesorios-hero-content p {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Sección Categorías */
+.categorias {
+    padding: 80px 20px;
+    background-color: white;
+}
+
+.categorias h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #333;
+}
+
+/* Sección Productos Destacados */
+.productos-destacados {
+    padding: 80px 20px;
+    background-color: white;
+}
+
+.productos-destacados h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #333;
+}
+
+/* Sección Por qué elegirnos */
+.por-que-elegirnos {
+    padding: 80px 20px;
+    background-color: white;
+}
+
+.por-que-elegirnos h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #333;
+}
+
+.elegirnos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.elegirnos-item {
+    text-align: center;
+    padding: 30px;
+}
+
+.elegirnos-item h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: #333;
+    font-weight: bold;
+}
+
+.elegirnos-item p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Sección Regalos Hero */
+.regalos-hero {
+    padding: 80px 20px;
+    background-color: white;
+    text-align: center;
+}
+
+.regalos-hero-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Sección Regalos más vendidos */
+.regalos-vendidos {
+    padding: 80px 20px;
+    background-color: #f0f0f0;
+}
+
+.regalos-vendidos-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.regalos-vendidos-texto {
+    flex: 1;
+}
+
+.regalos-vendidos-texto h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+    text-align: left;
+    font-weight: bold;
+}
+
+.regalos-vendidos-texto p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.regalos-vendidos-imagen {
+    flex: 1;
+}
+
+.regalos-vendidos-imagen img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Sección Regalos perfectos */
+.regalos-perfectos {
+    padding: 80px 20px;
+    background-color: white;
+    text-align: center;
+}
+
+.regalos-perfectos h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.regalos-perfectos p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #666;
+}
+
+/* Sección Ideas de Regalo */
+.ideas-regalo {
+    padding: 80px 20px;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.ideas-regalo h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #333;
+}
+
+.ideas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.idea-regalo {
+    text-align: center;
+}
+
+.idea-regalo img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.idea-regalo h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #333;
+    font-weight: bold;
+}
+
+.idea-regalo p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Sección Regalos extra especiales */
+.regalos-extra-especiales {
+    padding: 80px 20px;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.regalos-extra-especiales h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #333;
+}
+
+.regalos-extra-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.regalo-extra {
+    text-align: center;
+}
+
+.regalo-extra img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.regalo-extra h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #333;
+    font-weight: bold;
+}
+
+.regalo-extra p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Sección Regalos Románticos */
+.regalos-romanticos {
+    padding: 80px 20px;
+    background-color: #f0f0f0;
+}
+
+.regalos-romanticos-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.regalos-romanticos-texto {
+    flex: 1;
+}
+
+.regalos-romanticos-texto h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+    text-align: left;
+    font-weight: bold;
+}
+
+.regalos-romanticos-texto p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.regalos-romanticos-imagen {
+    flex: 1;
+}
+
+.regalos-romanticos-imagen img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Sección Black Friday */
+.black-friday {
+    padding: 80px 20px;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.black-friday h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.black-friday p {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #666;
+}
+
+/* Footer */
+footer {
+    background-color: #f0f0f0;
+    padding: 60px 20px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.footer-column h3 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: bold;
+}
+
+.footer-column p {
+    color: #666;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+    background-color: #ccc;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+/* Responsive básico */
+@media (max-width: 768px) {
+    .historia-content,
+    .productos,
+    .regalos-vendidos-content,
+    .regalos-romanticos-content,
+    .novedades-hero-content {
+        flex-direction: column;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    nav li {
+        display: block;
+        margin: 10px 0;
+    }
+    
+    .ideas-grid,
+    .regalos-extra-grid {
+        grid-template-columns: 1fr;
+    }
+}
